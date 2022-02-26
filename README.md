@@ -1,3 +1,21 @@
+## Development server
+
+Run `npm install` then to manage dark mode run `npm i angular-dark-mode --force` 
+run the serve with `ng serve`. 
+Navigate to `http://localhost:4200/` to see my connect 4.
+
+# Running unit tests
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I made few test for my service function in app/connect4.service.spec.ts
+
+## Rules
+
+To play, the players must decide who starts first.
+Player 1 can place his token now.
+Player 2 must select his piece manually and then place it on the board. 
+If it's not your turn to play, a window will warn you to change your token. 
+If there is a tie you can restart the game with the retry button
+
 # recruitment-frontend-exercise
 
 Create a Connect 4 on Angular latest version and Angular Material framework.

@@ -1,0 +1,48 @@
+<div align="center" *ngIf="((winners=='RED')||(winners=='YELLOW'))" class="gagnant">
+  <audio controls>
+    <audio class = "winmusic" src="../../assets/happy-corporate-logo.mp3" autoplay></audio>
+    Votre navigateur ne supporte pas la balise audio.
+  </audio>
+  <button (click)="setWinners('NONE')" class="btn winprint">{{this.winners}} WIN 😃 <br>🔄</button>
+</div>
+
+<div  *ngIf="((showBlock)&&(this.winners=='NONE'))" (click)="showBlock = false" class="whoStart" align="center">
+  <h2>Who goes first ?</h2>
+  <input type="button" value=' ' (click)="setStart('RED')" class="btn btn-red">
+  <input type="button" value=' '(click)="setStart('YELLOW')"class="btn btn-yellow">
+</div>
+
+<div *ngIf="!showBlock">
+<div class="table-container">
+<table cellspacing *ngIf="board | async as B" class="board" align="center">
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let L of matrix(B)">
+      <td *ngFor="let c of L; index as i" >
+        <div class="TOKEN" [class]="c" (click)="play(i)"></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<br>
+
+<table class="select" align="center">
+  <tbody>
+    <tr>
+      <td><div class="RED"    [class.select]="current === 'RED'"    (click)="current='RED'"></div></td>
+      <td><div class="YELLOW" [class.select]="current === 'YELLOW'" (click)="current='YELLOW'"></div></td>
+    </tr>
+  </tbody>
+</table>
+<div align="center"><button type="button" (click)="clearAll()" class='btn btn-clear' >RETRY 🔄</button></div>
+
+

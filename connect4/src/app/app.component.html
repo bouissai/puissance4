@@ -1,0 +1,34 @@
+<!--DARK MODE TOGGLE-->
+<a href="https://youtu.be/VOmlp4k5T0A" target="_blank" data-keyframers-credit style="color: #444"></a>
+<script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+
+
+
+<header>
+
+  <div id="musicOnOff" id = "button1">
+    <input (click)="setMusic(!this.music)"value="Activer le son" type="checkbox" id="a">
+    <label for="a">
+      <span>🔇</span>
+      <span>🔊</span>
+    </label>
+  </div>
+
+  <div id="darkMode" id = "button2">
+    <input (click)="switchTheme()" id="button2" value="Mode sombre" type="checkbox" id="b">
+    <label type="checkbox" for ="b"  >
+      <span>🌙</span>
+      <span>🌤</span>
+    </label>
+  </div>
+
+<h1>CONNECT 4</h1>
+</header>
+<br>
+<app-connect4></app-connect4>
+
+<div *ngIf="this.music">
+  <audio class = "winmusic" src="../../assets/jojos-bizarre-adventure-golden-wind-ost-dawn.mp3" autoplay></audio>
+</div>
+
+

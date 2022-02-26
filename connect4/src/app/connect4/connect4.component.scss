@@ -1,0 +1,174 @@
+.light-theme {
+  --background-color: #f5f5f5;
+  --text-color: #1a1a1a;
+  --box-color: #fff;
+  --button-color: yellow;
+
+  --box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
+}
+
+.dark-theme {
+  --background-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --box-color: #2b2b2b;
+  --button-color: red;
+}
+
+audio{
+  width:0%;
+  display:none;
+}
+
+.winprint{
+    display:flex;
+    color: white;
+    font-weight: bold;
+    font-size: 7vmin;
+    font-family:'Roboto',sans-serif;
+    border: 1vmin solid #167BFF;
+    margin-top: 25vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-25%); /* tiré de la moitié de sa propre hauteur */
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #167BFF;
+   // background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"   width="1296px" height="768px" viewBox="0 0 1296 768" enable-background="new 0 0 1296 768" xml:space="preserve"><g><polygon fill="#8694D1" points="766.6,1.2 -0.2,768 200.7,768 967.5,1.2   "/></g><g><polygon fill="#8694D1" points="1094.8,1.2 328,768 528.9,768 1295.7,1.2   "/></g></svg>') ;
+    background-size: contain;
+    ///background-position: -200px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.whoStart{
+  margin-top:20vmin;
+  background-color: NONE;
+  .btn-red{
+    width: 20vmin;
+    height: 20vmin;
+    background-color:red;
+    border: 1vmin solid #167BFF;
+    border-radius: 100%;
+    margin-right:2vmin;
+  }
+  .btn-yellow{
+    width: 20vmin;
+    height: 20vmin;
+    background-color:yellow;
+    border: 1vmin solid #167BFF;
+    border-radius: 100%;
+  }
+}
+
+
+table {
+  td {
+    width: 12vmin;
+    height: 6vmin;
+    div {
+      width: 9.5vmin;
+      height: 9.5vmin;
+      border: solid #167BFF 1px;
+      border-radius: 70%;
+      background-color: var(--background-color);
+    }
+
+    div.RED {
+      background-color: red;
+    }
+
+    div.YELLOW {
+      background-color: yellow;
+    }
+  }
+}
+
+table.board {
+  width: 12vmin;
+  border-collapse: collapse;
+  border : 5px solid;
+  border-color: #0000FF;
+  border-top : 5px solid #167BFF;
+  td {
+    background-color: #167BFF;
+  }
+}
+
+table.select {
+  td {
+    border-radius: 100%;
+    div.select {
+      border-width: 5px;
+      border-color: #167BFF;
+    }
+  }
+}
+
+*{
+  color : var(--text-color);
+}
+
+table.board td:hover::before {
+  background-color: #ffa;
+  content: '';
+  height: 100%;
+  left: -5000px;
+  position: absolute;
+  top: 0;
+  width: 10000px;
+  z-index: -2;
+}
+
+table.board {
+  overflow: hidden;
+}
+
+table.board tr:hover {
+  background-color: #ffa;
+}
+
+table.board td, th {
+  position: relative;
+}
+table.board td:hover::after,
+table.board th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+
+.btn-clear{
+  display:inline-block;
+  padding:0.1em 1.2em;
+  border:0.1em solid #167BFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  font-size: 3vmin;
+  text-align:center;
+  transition: all 0.2s;
+  color:var(--background-color);
+  background-color:#167BFF;
+  border-radius: 40px;
+  width:70%
+
+  }
+  .btn-clear:hover{
+    background-color:#7996bc7d;
+  }
+  @media all and (max-width:30em){
+    .btn-clear{
+      display:block;
+      margin:0.4em auto;
+  }
+}
+
