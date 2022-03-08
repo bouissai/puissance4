@@ -16,6 +16,7 @@ export class Connect4Component {
   showBlock = true;
   winners : winnerReturns ='NONE';
 
+
   constructor(private p4s: Connect4Service) {
     this.board = p4s.boardObs;
     //Initialize A empty board 6x7
@@ -29,6 +30,7 @@ export class Connect4Component {
     `);
     if (winR4_2_6x7.error === undefined) {
       this.message = p4s.init(winR4_2_6x7.board);
+
     }
   }
 
